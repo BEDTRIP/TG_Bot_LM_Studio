@@ -7,11 +7,11 @@ from Class_ModelResponse import ModelResponse
 
 import os
 from dotenv import load_dotenv
+
 # Загрузка переменных окружения из .env файла
 load_dotenv()
-
-# Замените 'YOUR_BOT_TOKEN' на ваш токен от BotFather
 API_TOKEN = os.getenv('API_TOKEN')
+
 bot = telebot.TeleBot(API_TOKEN)
 
 # Определение команд и их описаний
