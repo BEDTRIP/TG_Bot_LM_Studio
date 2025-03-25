@@ -5,8 +5,13 @@ import requests
 import jsons
 from Class_ModelResponse import ModelResponse
 
+import os
+from dotenv import load_dotenv
+# Загрузка переменных окружения из .env файла
+load_dotenv()
+
 # Замените 'YOUR_BOT_TOKEN' на ваш токен от BotFather
-API_TOKEN = '7016988516:AAFLXECp_n_BffK0anyCQWCF-8Q3HsYp5Bs'
+API_TOKEN = os.getenv('API_TOKEN')
 bot = telebot.TeleBot(API_TOKEN)
 
 # Определение команд и их описаний
